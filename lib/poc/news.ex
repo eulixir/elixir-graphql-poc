@@ -17,9 +17,7 @@ defmodule Poc.News do
       [%Link{}, ...]
 
   """
-  def list_links do
-    Repo.all(Link)
-  end
+  def list_links, do: Repo.all(Link)
 
   @doc """
   Gets a single link.
@@ -85,9 +83,7 @@ defmodule Poc.News do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_link(%Link{} = link) do
-    Repo.delete(link)
-  end
+  def delete_link(%Link{} = link), do: Repo.delete(link)
 
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking link changes.
